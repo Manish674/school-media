@@ -1,0 +1,24 @@
+Auth
+  create user on your dashboard
+
+User
+  L Username
+  L Phone number 
+  L Class
+  L Section
+
+Post
+  L video/photo
+  L comment (optional)
+  L Link
+
+Optional Activities
+  L Houses Scoreboard
+  L Calendars (tests, events, celebrations)
+  L Polls (future captains)
+
+Admin Page 
+  To create invite link for users 
+  - [] create a unique invite link and assign it to a user
+    - username
+    - a unique code to identify

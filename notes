@@ -1,0 +1,46 @@
+Entities
+  L User
+  L Post
+  L Comment
+
+Use Cases
+  User
+    L create user
+      Responsibilities
+        L check validation (can use joe but keep your use-case layer clean free from any framework)
+        L check if user already exists
+        L add new user to database
+    L get list of all user
+    L get single user
+    L update user  
+    L delete user
+
+  Post
+    L Create Post
+    L Read all post
+    L Read one post
+    L update post
+    L delete post
+
+  Comment
+    L Create comment
+    L Read all comment
+    L Read one comment
+    L update comment
+    L delete comment
+
+  Dependency
+    L database
+    L Joi (optional)
+
+Framework
+  L Database service
+  L image and video service 
+  L Router
+
+  Abstraction / interface
+    1) first define the dependencies in constructor functions of the classes
+    2) second define what we expect from the dependencies 
+
+Contract
+  signature functions of the desired service/dependency
