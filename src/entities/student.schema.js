@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const studentSchema = new mongoose.Schema({
-  studentname: { typeof: String },
+  student_name: { typeof: String },
   email: { typeof: String },
   phone_no: { typeof: Number },
   password: { typeof: String },

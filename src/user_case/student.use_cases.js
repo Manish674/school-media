@@ -1,16 +1,19 @@
-export default (StudentRepository ,service) => {
+export default (StudentRepository, service) => {
 
-  const createStudent = async (firstName, lastName, phone_no) => {
-    //Todo validation
-    return await StudentRepository.create({
-      studentName: `${firstName} + ${lastName}`,
-      phone_no
-    })
+  // Creating user by admin
+  const createStudentSoftCopy = async (studentInstance) => {
+    console.log('student usecase', studentInstance);
+    const { student_name, phone_no } = studentInstance;
+
+    const newStudent = await StudentRepository.addSoftCopy({ student_name, phone_no })
+
+    return newStudent;
   }
 
   const getStudents = async () => {
-    return await StudentRepository.find()
+    console.log('what is this', StudentRepository)
+    return 'great'
   }
 
-  return { createStudent, getStudents }
+  return { createStudentSoftCopy, getStudents }
 }

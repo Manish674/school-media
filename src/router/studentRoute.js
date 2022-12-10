@@ -8,6 +8,7 @@ const studentRouter = (dependencies) => {
   const controller = studentController(dependencies);
 
   router.route('/').get(controller.getStudents)
+  router.route('/add').post(controller.createStudent)
 
   return router
 }

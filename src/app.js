@@ -5,6 +5,7 @@ import projectDependencies from "./config.js";
 const app = express();
 
 projectDependencies.databaseService.connect().then(() => {
+  app.use(express.json())
   app.use('/api', apiRoute(projectDependencies))
 
   app.listen(3000, () => {

@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import User from "../../entities/student.schema.js";
+import StudentRepository from "./StudentRepository.js";
 
 const database = () => {
   const connect = async () => {
@@ -8,10 +8,12 @@ const database = () => {
     return client;
   }
 
-  const studentRepository = User;
-
-  return { connect, studentRepository }
+  return { connect, StudentRepository }
 
 }
 
 export default database;
+
+// export default class database {
+
+// }
