@@ -1,15 +1,13 @@
 import mongoose from "mongoose";
 
 const studentSchema = new mongoose.Schema({
-  student_name: { typeof: String },
-  email: { typeof: String, default: '' },
-  phone_no: { typeof: Number  },
-  password: { typeof: String },
-  is_verified: { typeof: Boolean, default: false },
-  isHardCopy: { typeof: Boolean, default: false },
-  invite_link: { typeof: String },
-  // invite_code: { typeof: String }
-});
+  student_name: { unique: true, type: String, required: true },
+  email: { unique: true, type: String },
+  phone_no: { type: Number },
+  password: { type: String },
+  is_verified: { type: Boolean, default: false },
+  isHardCopy: { type: Boolean, default: false },
+}, { strict: false });
 
 const student = mongoose.model("student", studentSchema);
 

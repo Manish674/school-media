@@ -3,7 +3,7 @@ import StudentRepository from "./StudentRepository.js";
 
 const database = () => {
   const connect = async () => {
-    const url = "mongodb://0.0.0.0:27017";
+    const url = "mongodb://0.0.0.0:27017/school-media";
     const client = await mongoose.connect(url);
     return client;
   }

@@ -3,6 +3,7 @@ import usecase from "../user_case/student.use_cases.js";
 export default (dependencies) => {
   const { StudentRepository } = dependencies.databaseService;
 
+  //SOFT COPY CREATED BY ADMIN
   const createStudent = async (req, res, next) => {
     //initialize use case
     const { createStudentSoftCopy } = usecase(StudentRepository);
